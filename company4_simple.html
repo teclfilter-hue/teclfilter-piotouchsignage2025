@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>三鈴工機株式会社 - 簡易紹介</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg-image: url('assets/images/bg_company4_simple.jpg');
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-image: var(--bg-image);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 背景を暗くする半透明オーバーレイ */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 0;
+    }
+
+    h1, p, .qrcode, .nav {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      font-size: 1.8em;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    p {
+      font-size: 1em; /* ← 少し小さくしました */
+      margin-bottom: 20px;
+      max-width: 600px;
+      line-height: 1.5;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+      overflow-y: auto;
+      max-height: 60vh; /* 長文でもはみ出さずスクロール可能に */
+      padding: 0 10px;
+    }
+
+    .qrcode img {
+      width: 180px;
+      height: 180px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* 下部固定ナビゲーション */
+    .nav {
+      position: fixed;
+      bottom: 15px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1em;
+      color: #ffd700;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>三鈴工機株式会社</h1>
+  <p>
+    2026年で創業80年を迎える老舗メーカーが手掛ける搬送装置<br>『ユニバーサルコンベア』を展示しています。<br>
+<br>
+動力を用いずに運搬作業を省力化できます。<br>
+<br>
+スタート地点からゴールまでぴおたんを上手に運べますか？<br>
+<br>
+ぜひ挑戦しに来てください！
+  </p>
+
+  <div class="qrcode">
+    <img src="assets/qrcodes/company4_simple.png" alt="公式サイトQRコード">
+  </div>
+
+  <div class="nav">
+    <a href="list1.html">← 一覧に戻る</a>
+    <a href="index.html">TOPへ戻る</a>
+  </div>
+</body>
+</html>

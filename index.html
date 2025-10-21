@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>展示製品のご紹介</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      font-family: sans-serif;
+      background-image: url('assets/images/bg_top.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      font-size: 3vw;
+      color: #ffffff;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .buttons {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: nowrap; /* 🔽 折り返し禁止 */
+      justify-content: center;
+      gap: 30px;
+      max-width: 90%;
+      overflow-x: auto; /* 🔽 画面が狭いときは横スクロール */
+      scrollbar-width: thin; /* Firefox向け */
+    }
+
+    .buttons::-webkit-scrollbar {
+      height: 8px;
+    }
+    .buttons::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 4px;
+    }
+
+    .buttons a {
+      min-width: 250px;
+      padding: 20px;
+      background-color: rgba(0, 123, 255, 0.85);
+      color: white;
+      font-size: 1.6vw;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      transition: background-color 0.3s;
+      user-select: none;
+
+      /* 🔽 文字を上下左右センター揃えにする */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap; /* 🔽 文字の改行防止 */
+    }
+
+    .buttons a:hover {
+      background-color: rgba(0, 90, 180, 0.9);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 6vw;
+      }
+
+      .buttons a {
+        min-width: 180px;
+        font-size: 4vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <h1>展示製品のご紹介 - タッチでお選びください</h1>
+
+  <div class="buttons">
+    <a href="company1_detail.html">株式会社SKRテクノロジー</a>
+    <a href="company2_detail.html">株式会社テックリンク</a>
+    <a href="list1.html">展示会社一覧</a>
+  </div>
+
+</body>
+</html>
